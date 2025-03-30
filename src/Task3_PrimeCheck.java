@@ -12,11 +12,20 @@ public class Task3_PrimeCheck {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
 
-        if (isPrime(n, 2)) {
+        long startTime = System.nanoTime();
+
+        boolean result = isPrime(n, 2);
+
+        long endTime = System.nanoTime();
+        double duration = (endTime - startTime) / 1_000_000.0;
+
+        if (result) {
             System.out.println("Prime");
         } else {
             System.out.println("Composite");
         }
+
+        System.out.println("Time taken: " + duration + " milliseconds");
     }
 
     /**

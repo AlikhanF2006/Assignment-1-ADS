@@ -15,11 +15,18 @@ public class Task2_Average {
         int n = scanner.nextInt();
         int sum = 0;
 
+        long startTime = System.nanoTime();
+
         for (int i = 0; i < n; i++) {
             sum += scanner.nextInt();
         }
 
         double average = (double) sum / n;
+
+        long endTime = System.nanoTime();
+        double duration = (endTime - startTime) / 1_000_000.0;
+
         System.out.println(average);
+        System.out.println("Time taken: " + duration + " milliseconds");
     }
 }

@@ -13,9 +13,17 @@ public class Task4_Factorial {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
 
+        long startTime = System.nanoTime();
+
         int result = factorial(n);
+
+        long endTime = System.nanoTime();
+        double duration = (endTime - startTime) / 1_000_000.0;
+
         System.out.println(result);
+        System.out.println("Time taken: " + duration + " milliseconds");
     }
+
     /**
      * Recursive method to calculate factorial of a number.
      *

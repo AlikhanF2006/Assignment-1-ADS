@@ -11,10 +11,17 @@ public class Task5_Fibonacci {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt(); // Read input
+        int n = scanner.nextInt();
+
+        long startTime = System.nanoTime();
 
         int result = fibonacci(n);
-        System.out.println(result); // Output the result
+
+        long endTime = System.nanoTime();
+        double duration = (endTime - startTime) / 1_000_000.0;
+
+        System.out.println(result);
+        System.out.println("Time taken: " + duration + " milliseconds");
     }
 
     /**

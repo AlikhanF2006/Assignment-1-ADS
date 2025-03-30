@@ -15,6 +15,8 @@ public class Task1_Minimum {
         int n = scanner.nextInt();
         int min = scanner.nextInt();
 
+        long startTime = System.nanoTime();
+
         for (int i = 1; i < n; i++) {
             int num = scanner.nextInt();
             if (num < min) {
@@ -22,6 +24,10 @@ public class Task1_Minimum {
             }
         }
 
-        System.out.println(min);
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime) / 1_000_000;
+
+        System.out.println("Minimum: " + min);
+        System.out.println("Time taken: " + duration + " ms");
     }
 }
